@@ -18,13 +18,13 @@
         
         function playRound(playerSelection, computerSelection) {
             if (playerSelection == "rock" && computerSelection == "scissors" 
-            || playerSelection == "paper" && computerSelection == "rock" 
-            || playerSelection == "scissors" && computerSelection == "paper") {
-               playerScore++;
-    
-            } else {playerSelection == "rock" && computerSelection == "paper" 
-            || playerSelection == "paper" && computerSelection == "scissors" 
-            || playerSelection == "scissors" && computerSelection == "rock"
+                || playerSelection == "paper" && computerSelection == "rock" 
+                || playerSelection == "scissors" && computerSelection == "paper") {
+                playerScore++;
+            } else {
+                playerSelection == "rock" && computerSelection == "paper" 
+                || playerSelection == "paper" && computerSelection == "scissors" 
+                || playerSelection == "scissors" && computerSelection == "rock"
                 computerScore++;                
            }  
         }   
@@ -42,7 +42,9 @@
                 alert(`You win! With a final score of ${playerScore}:${computerScore}`);
             } else if (computerScore > playerScore) {
                 alert(`Sorry, you lost! With a final score of ${computerScore}:${playerScore}`)
-            } else ("You drew! Better luck next time.")
+            } else {
+                "You drew! Better luck next time."
+            }
 
             console.log("----Final Score----");
             console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
